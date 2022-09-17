@@ -1,0 +1,277 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.save-segment1:hover {
+  background: #fff;
+  color: #006cff;
+}
+.save-segment1 {
+  margin: 0;
+  margin-top: 5px;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  font-weight: 600;
+  background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+  letter-spacing: 1px;
+  color: #fff;
+  border: none !important;
+  position: relative;
+  height: 35px;
+  font-size: 14px;
+  width: 180px;
+  padding: 8px 20px 5px 20px;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  border-radius: 3px;
+}
+
+.save-segment1:before, .save-segment1:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+	transition: 400ms ease all;
+}
+
+.save-segment1:after {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+.save-segment1:hover:before, .save-segment1:hover:after {
+	width: 100%;
+	transition: 800ms ease all;
+}
+
+.add-btn {
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: linear-gradient(#389FFD, #006cff);
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 35px;
+  padding: 5px 10px 8px 10px;
+  transition: 800ms ease all;
+  outline: none;
+}
+
+.save-btn {
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: forestgreen;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 35px;
+  padding: 0 2em;
+  transition: 800ms ease all;
+  outline: none;
+}
+
+.close-btn {
+  cursor: pointer;
+    margin-left: 15px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: white;
+    color: red;
+    border: none;
+    position: relative;
+    height: 35px;
+    padding: 0 2em;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+.modal-header {
+  display: flex;
+  background: lightseagreen;
+    padding: 1px;
+    color: white;
+}
+
+.input-field {
+    width: 100%;
+    border: 2px solid #ccc;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.modal { /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  right: 0%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  height: -webkit-fill-available;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal-details {
+  padding: 20px; 
+    height: 480px;
+    overflow-y: auto;
+  
+}
+
+.minus {
+  background: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    width: 30px;
+    text-align-last: center;
+}
+
+.modal-drop {
+  margin-bottom: 10px;
+  padding: 10px;
+    overflow-y: auto;
+    width: 63%;
+    height: 100px;
+    min-height: fit-content;
+    border: 2px solid blue;
+}
+
+.indicator {
+  width: 0px;
+    border-radius: 98px;
+    height: 10px;
+    padding-left: 10px;
+    place-self: center;
+}
+
+.indicator1 {
+  margin-right: 2px;
+  background: forestgreen;
+  width: 0px;
+    border-radius: 98px;
+    height: 10px;
+    padding-left: 10px;
+    place-self: center;
+}
+
+.indicator2 {
+  margin-right: 2px;
+  background: red;
+  width: 0px;
+    border-radius: 98px;
+    height: 10px;
+    padding-left: 10px;
+    place-self: center;
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  padding-left: 15px;
+  padding-right: 20px;
+    color: white;
+    float: right;
+    font-size: 19px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.modal-body {padding: 20px 16px;}
+
+.modal-footer {
+    width: 100%;
+    position: fixed;
+    padding: 10px 15px;
+    background-color: whitesmoke;
+    color: white;
+    bottom: 0%;
+}
+.display-block {
+display: block;
+}
+
+.display-none {
+display: none;
+}
